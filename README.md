@@ -16,25 +16,18 @@ This study investigates the relationship between broadband internet access and m
 
 ---
 
-## 📐 Econometric Framework
+## Econometric Framework
 To account for unobserved time-invariant heterogeneity across South Carolina's diverse counties, the primary model implements a log-log fixed effects specification:
 
-$$ \log(\text{median\_inc}_{it}) = \beta_1 \log(\text{broadband\_pct}_{it}) \times \text{county\_type}_{it} + \beta_2 \log(\text{pop\_total}_{it}) + \alpha_i + \delta_t + \varepsilon_{it} $$
+$$\log(\text{median income}_{it}) = \beta_1 \log(\text{broadband \%}_{it}) \times \text{county type}_{it} + \beta_2 \log(\text{total pop}_{it}) + \alpha_i + \delta_t + \varepsilon_{it}$$
 
 Where:
-* $\alpha_i$ represents **County Fixed Effects** (capturing permanent differences in wealth and regional industries).
-* $\delta_t$ represents **Time Fixed Effects** (capturing broader macro trends affecting the whole state between 2017 and 2022).
-* $\log(\text{pop\_total})$ controls for **agglomeration effects** (larger populations generating higher incomes naturally).
+* $\alpha_i$ represents **County Fixed Effects** (permanent differences in wealth and regional industries).
+* $\delta_t$ represents **Time Fixed Effects** (broader macro trends affecting the whole state between 2017 and 2022).
+* $$\log(\text{total pop})$$ controls for **agglomeration effects** (larger populations generating higher incomes naturally).
 
 ---
 
-## 📂 Repository Layout
-* `/scripts`: Cleaned R code scripts isolating data merging, cleaning pipelines, and regression models.
-* `Econometrics_Final_Project.Rmd`: The master R Markdown document combining the narrative and computational blocks.
-* `README.md`: Project executive overview.
-
----
-
-## 🏛️ Theoretical Background & Literature
-* **Everett M. Rogers (Diffusion of Innovations):** Applies the theory of hierarchical diffusion to explain how urban epicenters adopt infrastructure innovations rapidly, leaving a structural adoption lag in rural communities.
+## Theoretical Background & Literature
+* **Everett M. Rogers (Diffusion of Innovations):** Applies the theory of hierarchical diffusion to explain how urban epicenters adopt infrastructure innovations rapidly, leaving a structural adoption lag in rural communities. 
 * **Röller & Waverman / Czernich et al.:** Explores the reduction of transaction and information search costs resulting from high-speed communications, shifting the localized production function upward.
